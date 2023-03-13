@@ -1,4 +1,4 @@
-name: "OpenVPN-Connect"
+name: "openvpn-github-action"
 description: "connect to OpenVPN server"
 branding:
   icon: "lock"
