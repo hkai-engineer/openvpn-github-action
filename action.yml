@@ -7,14 +7,26 @@ inputs:
   config_file:
     description: "Location of OpenVPN client config file"
     required: true
+  ca:
+    description: "CA certificate"
+    required: false
+  cert:
+    description: "Client certificate"
+    required: false
   username:
     description: "Username"
     required: false
   password:
     description: "Password"
     required: false
+  passphrase:
+    description: "Passphrase for the client certificate"
+    required: false
   tls_auth_key:
     description: "Pre-shared secret for TLS-auth HMAC signature"
+    required: false
+  tls_crypt_key:
+    description: "TLS crypt key"
     required: false
   client_key:
     description: "Local peer's private key"
