@@ -15,6 +15,8 @@ A modification of https://github.com/kota65535/github-openvpn-connect-action to 
 | Name          | Description                            | Required |
 |---------------|----------------------------------------|----------|
 | `config_file` | Location of OpenVPN client config file | yes      |
+| `hostname`    | Remote OpenVPN server hostname         | yes      |
+| `port`        | Remote OpenVPN server port number      | yes      |
 
 ### Authentication Inputs
 
@@ -55,7 +57,7 @@ via [encrypted secrets](https://docs.github.com/en/actions/security-guides/encry
           sudo apt update
           sudo apt install -y openvpn openvpn-systemd-resolved
       - name: Connect to VPN
-        uses: "hkai-engineer/openvpn-github-action@v2"
+        uses: "hkai-engineer/openvpn-github-action@v2.1.0"
         with:
           config_file: ./github/workflows/client.ovpn
           ca: ${{ secrets.OVPN_CA }}

@@ -3183,6 +3183,8 @@ const Tail = (__nccwpck_require__(824)/* .Tail */ .x);
 
 const run = (callback) => {
   const configFile = core.getInput("config_file", { required: true });
+  const hostname = core.getInput("hostname", { required: true });
+  const port = core.getInput("port", { required: true });
   const ca = core.getInput("ca");
   const cert = core.getInput("cert");
   const username = core.getInput("username");
@@ -3195,6 +3197,9 @@ const run = (callback) => {
   if (!fs.existsSync(configFile)) {
     throw new Error(`config file '${configFile}' not found`);
   }
+
+  // add hostname and port to config file
+  fs.appendFileSync(configFile, `remote ${hostname} ${port}\n`);
 
   // 1. Configure client
 

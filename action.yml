@@ -7,6 +7,12 @@ inputs:
   config_file:
     description: "Location of OpenVPN client config file"
     required: true
+  hostname:
+    description: "Remote hostname"
+    required: true
+  port:
+    description: "Remote port"
+    required: true
   ca:
     description: "CA certificate"
     required: false
