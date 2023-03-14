@@ -57,7 +57,7 @@ via [encrypted secrets](https://docs.github.com/en/actions/security-guides/encry
           sudo apt update
           sudo apt install -y openvpn openvpn-systemd-resolved
       - name: Connect to VPN
-        uses: "hkai-engineer/openvpn-github-action@v2.1.0"
+        uses: "hkai-engineer/openvpn-github-action@v2.1.1"
         with:
           config_file: ./github/workflows/client.ovpn
           hostname: ${{ secrets.OVPN_HOSTNAME }}
