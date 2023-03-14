@@ -1344,7 +1344,7 @@ function manageMenu() {
 	echo "   3) Delete revoked user"
 	echo "   4) Remove OpenVPN"
 	echo "   5) Exit"
-	until [[ $MENU_OPTION =~ ^[1-4]$ ]]; do
+	until [[ $MENU_OPTION =~ ^[1-5]$ ]]; do
 		read -rp "Select an option [1-5]: " MENU_OPTION
 	done
 
