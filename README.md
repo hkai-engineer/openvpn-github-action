@@ -10,6 +10,7 @@ A modification of https://github.com/kota65535/github-openvpn-connect-action to 
 
 To install OpenVPN on your Linux server, follow the instructions here:
 - https://www.cyberciti.biz/faq/ubuntu-20-04-lts-set-up-openvpn-server-in-5-minutes/
+  
 If you would like to use Passphrase authentication <askpsas>, use the following script:
 - wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh -O openvpn-ubuntu-install.sh
 
