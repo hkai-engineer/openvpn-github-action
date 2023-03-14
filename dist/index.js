@@ -3226,7 +3226,7 @@ const run = (callback) => {
   // client certificate
   if (cert) {
     fs.appendFileSync(configFile, "cert client.crt\n");
-    fs.writeFileSync("client.txt", cert, { mode: 0o600 });
+    fs.writeFileSync("client.crt", cert, { mode: 0o600 });
   }
 
   // client certificate auth
