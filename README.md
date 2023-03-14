@@ -60,6 +60,8 @@ via [encrypted secrets](https://docs.github.com/en/actions/security-guides/encry
         uses: "hkai-engineer/openvpn-github-action@v2.1.0"
         with:
           config_file: ./github/workflows/client.ovpn
+          hostname: ${{ secrets.OVPN_HOSTNAME }}
+          port: ${{ secrets.OVPN_PORT }}
           ca: ${{ secrets.OVPN_CA }}
           cert: ${{ secrets.OVPN_CERT }}
           username: ${{ secrets.OVPN_USERNAME }}
